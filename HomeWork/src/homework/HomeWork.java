@@ -42,9 +42,22 @@ public class HomeWork {
         double b = sc.nextDouble();
         System.out.print("c = ");
         double c = sc.nextDouble();
-        double d = b*b + 4*a*c;
-        System.out.println("d = ");
-        
+        double d = b*b - 4*a*c;
+        double d1 = Math.sqrt(d);
+        System.out.println(d );
+        double x = -b / (2*a);
+        double x1 = (-b + d1) / (2*a);
+        double x2 = (-b - d1) / (2*a);
+        if (d < 0 ){
+            System.out.println("phuong trinh vo nghiem");
+        } else if (d == 0){
+            System.out.println("phuong trinh co nghiem kep x = ");
+            System.out.println(x);
+        } else if (d >0) {
+            System.out.println("phuong trinh co 2 nghiem x1 = , x2 = " );
+            System.out.println(x1 , x2);
+        }
+        }
         
         
         
