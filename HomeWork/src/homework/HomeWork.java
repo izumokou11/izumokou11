@@ -16,6 +16,7 @@ public class HomeWork {
     /**
      * @param args the command line arguments
      */
+    @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
@@ -43,20 +44,29 @@ public class HomeWork {
         System.out.print("c = ");
         double c = sc.nextDouble();
         double d = b*b - 4*a*c;
-        double d1 = Math.sqrt(d);
-        System.out.println("d = " + d );
-        double x = -b / (2*a);
-        float x1 = (float) ((-b + d1) / (2*a));
-        float x2 = (float) ((-b - d1) / (2*a));
+        
+        if (a ==0){
+            if (b == 0) {
+                System.out.println("phuong trinh vo nghiem");
+            }else { 
+                System.out.println("phuong trinh co 1 nghiem: " + "x = " + (-c / b));
+            } return;
+        };
         if (d < 0 ){
             System.out.println("phuong trinh vo nghiem");
         } else if (d == 0){
+            double x = -b / (2*a);
             System.out.println("phuong trinh co nghiem kep x = " + x);
         } else if (d >0) {
-            System.out.println("phuong trinh co 2 nghiem \nx1 = " + x1);
-            System.out.println("x2 = " + x2);
+            System.out.println("d = " +d );
+            double d1 = Math.sqrt(d);
+            double x1 = (-b + d1) / (2*a);
+            double x2 = (-b +d1) / (2*a);
+            System.out.println("phuong trinh co 2 nghiem \nx1 = " + x1 + "\nx2 = " + x2);
+            
         }
         
+       
         
         
         
