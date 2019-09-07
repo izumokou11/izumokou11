@@ -18,7 +18,7 @@ public class Les7 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int n, sx;
+        int sx;
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap vao do dai mang: ");
         System.out.print("Do dai mang A: ");
