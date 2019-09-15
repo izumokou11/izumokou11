@@ -22,22 +22,23 @@ public class Sapxepkitu {
         System.out.print("Nhap noi dung cua chuoi: ");
         String s = sc.nextLine();
         char[] A = s.toCharArray();
-        char sx = sx(A);
-        System.out.println(sx);
-    }
-
-    static char sx(char[] A) {
-        char sx1 = 0;
-        for (int i = 0; i < A.length; i++) {
-            for (int j = i + 1; j < A.length; j++) {
-                if (A[i] > A[j]) {
-                    sx1 = A[i];
-                    A[i] = A[j];
-                    A[j] = sx1;
-                }
-            }
+        char [] B = sapxep(A);
+        for (int i = 0; i < A.length; i++){
             System.out.print(A[i] + ", ");
         }
-        return sx1;
+    }
+
+    static char [] sapxep(char[] A) {
+        char temp;
+        for (int i = 0; i < A.length; i++) {
+            for (int j = i + 1; j < A.length - 1; j++) {
+                if (A[i] > A[j]) {
+                    temp = A[i];
+                    A[i] = A[j];
+                    A[j] = temp;
+                }
+            }
+        }
+        return A;
     }
 }
