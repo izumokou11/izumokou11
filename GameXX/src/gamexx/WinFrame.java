@@ -53,7 +53,7 @@ public class WinFrame extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if ("OKKKK".equals(ae.getActionCommand()))
-                JOptionPane.showMessageDialog(this, "Get back!");
+                JOptionPane.showMessageDialog(this, "Nothing to do here! Please get back.");
         if ("Exit".equals(ae.getActionCommand()))
             System.exit(0);
     }

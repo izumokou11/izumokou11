@@ -10,6 +10,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javafx.scene.paint.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -36,14 +37,16 @@ public class XXGame extends JFrame {
     JLabel lbCount = new JLabel();
 
     public XXGame() {
-        setSize(600, 600);
+        setSize(510, 600);
         setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         createButton();
 
-        lbCount.setText(String.valueOf(count));
-        lbCount.setBounds(10, 510, 50, 80);
+        lbCount.setText("Tim vi tri kho bau tren map");
+        Font font = new Font("Courier", Font.BOLD,20);
+        lbCount.setFont(font);
+        lbCount.setBounds(10, 500, 400, 80);
         add(lbCount);
         for (int i = 0; i < 25; i++) {
             btnArr.get(i).setName("notEnd");
@@ -51,6 +54,11 @@ public class XXGame extends JFrame {
         end = (int) (Math.random() * 25);
         endX = (int) (Math.random() * 25);
         endY = (int) (Math.random() * 25);
+        while (end == endX || end == endY || endX == endY) {
+            end = (int) (Math.random() * 25);
+            endX = (int) (Math.random() * 25);
+            endY = (int) (Math.random() * 25);
+        }
         System.out.println(end);
         System.out.println(endX);
         System.out.println(endY);
