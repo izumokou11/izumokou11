@@ -1,0 +1,47 @@
+body {
+    background-image: url("../img/bg1.jpg");
+    font-family: tahoma;
+    font-size: 16px;
+    text-decoration: none;
+    background-attachment: fixed;
+}
+
+#menu {
+    width: 700px;
+    height: 40px;
+    background: rgb(255, 0, 0);
+}
+
+ul.root li {
+    list-style: none;
+    float: left;
+}
+
+ul.root li a {
+    text-decoration: none;
+    color: yellow;
+    padding: 0px 15px 0px 15px;
+    line-height: 40px;
+}
+
+.tbody th {
+    text-decoration: none;
+    font-family: tahoma;
+    font-size: 12px;
+}
+
+.th1 {
+    font-size: 40px;
+    background-color: pink;
+}
+
+.tb1 {
+    background-color: pink;
+    text-align: center;
+}
+
+.info {
+    position: absolute;
+    right: 10px;
+    top: 150px;
+}

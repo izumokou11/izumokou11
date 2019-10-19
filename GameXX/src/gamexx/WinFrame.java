@@ -30,20 +30,15 @@ public class WinFrame extends JFrame implements ActionListener{
         setLayout(null);
 
         JTextField txt = new JTextField("Congratulation");
-        txt.setBounds(200, 300, 150, 50);
+        txt.setBounds(200, 100, 150, 50);
         Color color = Color.RED;
         txt.setForeground(color);
         
         Font font = new Font("Courier", Font.BOLD,20);
         txt.setFont(font);
         this.add(txt);
-        JButton win = new JButton(new ImageIcon("src\\Image\\22.png"));
-        win.setBounds(100, 100, 100, 100);
-        this.add(win);
-        win.setActionCommand("OKKKK");
-        win.addActionListener(this);
         JButton exit = new JButton("Exit");
-        exit.setBounds(400, 100, 100, 100);
+        exit.setBounds(250, 300, 100, 100);
         this.add(exit);
         exit.setActionCommand("Exit");
         exit.addActionListener(this);
@@ -52,8 +47,6 @@ public class WinFrame extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if ("OKKKK".equals(ae.getActionCommand()))
-                JOptionPane.showMessageDialog(this, "Nothing to do here! Please get back.");
         if ("Exit".equals(ae.getActionCommand()))
             System.exit(0);
     }

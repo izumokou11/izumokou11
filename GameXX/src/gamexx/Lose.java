@@ -5,7 +5,9 @@
  */
 package gamexx;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
@@ -26,15 +28,15 @@ public class Lose extends JFrame implements ActionListener{
         setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
-        JButton Loser = new JButton(new ImageIcon("src\\Image\\3.jpg"));
-        Loser.setBounds(75, 50, 452, 257);
-        this.add(Loser);
         JTextField Loser1 = new JTextField("" , JTextField.CENTER);
-        Loser1.setBounds(75, 320, 250, 50);
-        Loser1.setText("     Dude, you're going the wrong way");
-        Loser1.setBackground(Color.black);
-        Loser1.setForeground(Color.white);
+        Loser1.setBounds(65, 320,500, 50);
+        Loser1.setText("Dude, you're going the wrong way");
+        Font font = new Font("Courier", Font.BOLD,30);
+        Loser1.setFont(font);
+        Loser1.setBackground(Color.white);
+        Loser1.setForeground(Color.black);
         this.add(Loser1);
+        Loser1.setLayout(new FlowLayout());
         JButton exit = new JButton("Exit");
         exit.setBounds(200, 400, 100, 100);
         this.add(exit);
